@@ -8,7 +8,6 @@ import Cat5 from './Cat5'
 import Cat6 from './Cat6'
 import HomeAd from './HomeAd'
 import Sub from './Sub'
-import Footer from '../Footer'
 
 
 export default class Home extends Component {
@@ -24,7 +23,6 @@ export default class Home extends Component {
                 <Cat5 />
                 <Cat6 />
                 <Sub />
-                <Footer />
             </div>
         )
     }
