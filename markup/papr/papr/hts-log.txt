@@ -1,0 +1,17 @@
+HTTrack3.49-2 launched on Thu, 26 Dec 2019 10:30:24 at axilthemes.com/demo/template/papr/
+(winhttrack axilthemes.com/demo/template/papr/ -O "papr/papr" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:03:55	Warning: 	File not parsed, looks like binary: axilthemes.com/demo/template/papr/assets/fonts/font-awesome/fa-brands-400.woff2
+11:03:55	Warning: 	File not parsed, looks like binary: axilthemes.com/demo/template/papr/assets/fonts/font-awesome/fa-light-300.woff2
+11:03:55	Error: 	"Forbidden" (403) at link axilthemes.com/demo/template/papr/assets/fonts/font-awesome/ (from axilthemes.com/demo/template/papr/assets/css/fontawesome-all.min.css)
+11:03:55	Warning: 	File not parsed, looks like binary: axilthemes.com/demo/template/papr/assets/fonts/font-awesome/fa-regular-400.woff2
+11:03:56	Warning: 	File not parsed, looks like binary: axilthemes.com/demo/template/papr/assets/fonts/font-awesome/fa-solid-900.woff2
+11:03:56	Warning: 	File not parsed, looks like binary: axilthemes.com/demo/template/papr/assets/images/video-post/post-format-video-1.webp
+
+HTTrack Website Copier/3.49-2 mirror complete in 51 minutes 37 seconds : 268 links scanned, 266 files written (58756894 bytes overall) [56660169 bytes received at 18295 bytes/sec], 2598652 bytes transferred using HTTP compression in 48 files, ratio 16%, 1.3 requests per connection
+(1 errors, 5 warnings, 0 messages)

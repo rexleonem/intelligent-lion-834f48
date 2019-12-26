@@ -1,0 +1,75 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.19.0/libexec/bin/yarn.js install
+
+PATH: 
+  /Applications/XAMPP/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/XAMPP/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/swapareanigeria/Library/Android/sdk/tools:/Users/swapareanigeria/Library/Android/sdk/tools/bin/:/Users/swapareanigeria/Library/Android/sdk/platform-tools:/Users/swapareanigeria/Library/Android/sdk/tools:/Users/swapareanigeria/Library/Android/sdk/tools/bin/:/Users/swapareanigeria/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.19.0
+
+Node version: 
+  10.16.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/swapareanigeria/Desktop/Proj/web/africasveryown/git/intelligent-lion-834f48/package.json: Unexpected token / in JSON at position 600
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.19.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "africasveryown",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@babel/core": "^7.7.7",
+      "@babel/preset-env": "^7.7.7",
+      "@glidejs/glide": "^3.4.1",
+      "axios": "^0.19.0",
+      "babel-loader": "^8.0.0-beta.0",
+      "bootstrap": "^4.4.1",
+      "moment": "^2.24.0",
+      "react": "^16.12.0",
+      "react-animated-slider": "^2.0.0",
+      "react-bootstrap": "^1.0.0-beta.16",
+      "react-dom": "^16.12.0",
+      "react-router-dom": "^5.1.2",
+      "react-router-flux": "^1.0.0",
+      "react-scripts": "^3.3.0",
+      "react-slick": "^0.25.2",
+      "slick-carousel": "^1.8.1",
+      // "webpack": "^4.41.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

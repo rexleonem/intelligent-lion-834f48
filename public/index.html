@@ -9,7 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="assets/images/logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,20 +24,67 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>100% African - We're Africa's Very Own</title>
-    <meta name="description" content="A Template for Magazine, Blog and Shop.">
-    <!-- Bootstrap CSS file-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Main CSS file-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Fontawesome 5 CSS file-->
-    <link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
-    <!-- Magnific Popup CSS-->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Google Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900%7CLora:400,700">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Papr">
+	<meta name="twitter:creator" content="@Papr">
+	<meta name="twitter:title" content="Papr">
+	<meta name="twitter:description" content="Papr Trendy News and Megazine Template">
+	<meta name="twitter:image" content="assets/images/papr.png">
+	<!-- Facebook -->
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Papr">
+	<meta property="og:description" content="Papr Trendy News and Megazine Template">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="assets/images/papr.png">
+	<meta property="og:image:secure_url" content="">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	
+	<!-- Page Title
+    	======================================== -->
+	<title>Africa's Very Own</title>
+	<!-- links for favicon
+    	======================================== -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Icon fonts
+    	======================================== -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i,700,700i,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/iconfont.css">
+	<!-- css links
+    	======================================== -->
+	<!-- Bootstrap link -->
+	<link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap.min.css">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
+	<!-- Magnific popup -->
+	<link rel="stylesheet" type="text/css" href="assets/css/vendor/magnific-popup.css">
+	<!-- Animate css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/vendor/animate.css">
+
+	<!-- Custom css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   <body>
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -50,24 +97,35 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <!-- javascript files-->
-    <!-- jquery-->
-    <script src="assets/js/jquery.min.js"></script>
-    <!-- lozad js-->
-    <script src="assets/js/lozad.min.js"></script>
-    <!-- Bootstrap js-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Aos js-->
-    <script src="assets/js/aos.js"></script>
-    <!-- Slick slider js-->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Magnific popup js-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Countdown js-->
-    <script src="assets/js/jquery.countdown.js"></script>
-    <!-- CountTo js-->
-    <script src="assets/js/jquery.countTo.js"></script>
-    <!-- Global - Main js-->
-    <script src="assets/js/global.js"></script>
+	<!-- Javascripts
+    	======================================= -->
+	<!-- jQuery -->
+	<script src="assets/js/vendor/jquery.min.js"></script>
+	<script src="assets/js/vendor/jquery-migrate.min.js"></script>
+	<!-- jQuery Easing Plugin -->
+	<script src="assets/js/vendor/easing-1.3.js"></script>
+	<!-- Waypoints js -->
+	<script src="assets/js/vendor/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel JS -->
+	<script src="assets/js/vendor/owl.carousel.min.js"></script>
+	<!-- Slick Carousel JS -->
+	<script src="assets/js/vendor/slick.min.js"></script>
+	<!-- Bootstrap js -->
+	<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+	<!-- Counter up js -->
+	<script src="assets/js/vendor/jquery.counterup.js"></script>
+	<!-- Magnific Popup js -->
+	<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+	<!-- Nicescroll js -->
+	<script src="assets/js/vendor/jquery.nicescroll.min.js"></script>
+	<!-- IF ie -->
+	<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+	<!-- Plugins -->
+	<script src="assets/js/plugins.js"></script>
+	<!-- Custom Script -->
+	<script src="assets/js/main.js"></script>
+</body>
+
   </body>
 </html>

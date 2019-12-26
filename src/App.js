@@ -1,22 +1,14 @@
 import React from 'react';
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './components/home/'
-import About from './components/pages/About'
-import Contact from './components/pages/Contact'
-import Blog from './components/blog'
-import Details from './components/blog/Details'
-
-
+import Home from './pages/Home';
+import Footer from './pages/Global/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <Footer />
-    </div>
-  );
+<div>
+    <Home />
+    <Footer />
+  </div>
+    );
 }
 
 export default App;

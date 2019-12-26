@@ -1,0 +1,45 @@
+HTTrack3.49-2 launched on Thu, 26 Dec 2019 10:17:41 at https://kelsey.dexignzone.com/xhtml/
+(winhttrack https://kelsey.dexignzone.com/xhtml/ -O "avo/avo" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:17:45	Warning: 	Found for https://kelsey.dexignzone.com/robots.txt
+10:17:45	Warning: 	File has moved from https://kelsey.dexignzone.com/robots.txt to https://kelsey.dexignzone.com/xhtml/error-404.html
+10:20:23	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:20:23	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:21:58	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:21:58	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:21:59	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:21:59	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:01	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:01	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:05	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:05	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:06	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:06	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:07	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:07	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:09	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:09	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:12	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:12	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:13	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:13	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:16	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:16	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:58	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:58	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:59	Warning: 	File not parsed, looks like binary: https://kelsey.dexignzone.com/xhtml/plugins/revolution/revolution/css/openhand.cur
+10:22:59	Warning: 	File not parsed, looks like binary: https://kelsey.dexignzone.com/xhtml/plugins/revolution/revolution/css/closedhand.cur
+10:22:59	Warning: 	Found for https://kelsey.dexignzone.com/xhtml/Version/
+10:22:59	Warning: 	File has moved from https://kelsey.dexignzone.com/xhtml/Version/ to https://kelsey.dexignzone.com/xhtml/error-404.html
+10:22:59	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:22:59	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+10:23:00	Warning: 	Unable to test https://kelsey.dexignzone.com/xhtml/error-404.html (loop to same filename)
+10:23:00	Warning: 	link is probably looping, type unknown, aborting: https://kelsey.dexignzone.com/xhtml/error-404.html
+
+HTTrack Website Copier/3.49-2 mirror complete in 5 minutes 24 seconds : 182 links scanned, 180 files written (11384802 bytes overall) [10785869 bytes received at 33289 bytes/sec], 790050 bytes transferred using HTTP compression in 20 files, ratio 13%, 3.1 requests per connection
+(No errors, 34 warnings, 0 messages)
