@@ -15,7 +15,6 @@ export default class Home extends Component {
             <div class="main-content">
             {/* <Popup /> */}
                 <Sidenav />
-                <Header />
                 <Recent />
                 <Top />
                 <Trending />

@@ -1,16 +1,48 @@
 import React, { Component } from 'react'
 
 import CategoryImg from '../../images/category-bg/category-bg-1.png'
+import { Link } from 'react-router-dom';
+import SideAdd from './SideAdd';
+// import { axios } from 'axios';
+const Entities = require('html-entities').XmlEntities;
+ 
+const entities = new Entities();
+ 
 
 export default class MainSidebar extends Component {
+
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      loading: true,
+      posts: [],
+      error: ''       
+    }
+  }
+
+  async componentDidMount(){
+    try {
+      const response = await fetch('https://deeafrikan.website/wp-json/wp/v2/posts?tags=14');
+      const responseJson = await response.json();
+      this.setState({
+        loading: false,
+        posts: responseJson,
+      }, function () {
+      });
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
+  
     render() {
+      const { posts } = this.state;
+      console.log(posts);
         return (
 <div className="col-lg-4">
 <aside className="post-sidebar">
-    <div className="add-block-widget m-b-xs-40">
-        <a href="#"><img src="assets/images/clientbanner/clientbanner2.jpg" alt="sidebar add"
-                className="img-fluid" /></a>
-    </div>
+<SideAdd />
     <div className="newsletter-widget weekly-newsletter bg-grey-light-three m-b-xs-40">
         <div className="newsletter-content">
             <div className="newsletter-icon">
@@ -147,320 +179,123 @@ export default class MainSidebar extends Component {
             <li className="social-share-list text-center perfect-square">
                 <a href="#" className="list-inner bg-color-facebook">
                     <i className="fab fa-facebook-f"></i>
-                    <div className="counts">2000+</div>
-                    <div className="title">Fans</div>
+                    <div className="counts">Find us on </div>
+                    <div className="title">Facebook</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
                 <a href="#" className="list-inner bg-color-twitter">
                     <i className="fab fa-twitter"></i>
-                    <div className="counts">4000+</div>
-                    <div className="title">Followers</div>
+                    <div className="counts">Follow us on</div>
+                    <div className="title">Twitter</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
                 <a href="#" className="list-inner bg-color-youtube">
                     <i className="fab fa-youtube"></i>
-                    <div className="counts">1M+</div>
-                    <div className="title">Subscribers</div>
+                    <div className="counts">Watch us on</div>
+                    <div className="title">Youtube</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
                 <a href="#" className="list-inner bg-color-linkedin">
                     <i className="fab fa-linkedin-in"></i>
-                    <div className="counts">600+</div>
-                    <div className="title">Connections</div>
-                </a>
-            </li>
-            <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-vimeo">
-                    <i className="fab fa-vimeo"></i>
-                    <div className="counts">500+</div>
-                    <div className="title">Connections</div>
-                </a>
-            </li>
-            <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-pinterest">
-                    <i className="fab fa-pinterest"></i>
-                    <div className="counts">600+</div>
-                    <div className="title">Followers</div>
-                </a>
-            </li>
-            <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-twitch">
-                    <i className="fab fa-twitch"></i>
-                    <div className="counts">1K+</div>
-                    <div className="title">Followers</div>
+                    <div className="counts">Connect on</div>
+                    <div className="title">LinkedIn</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
                 <a href="#" className="list-inner bg-color-instagram">
                     <i className="fab fa-instagram"></i>
-                    <div className="counts">1K+</div>
-                    <div className="title">Followers</div>
+                    <div className="counts">Follow us on</div>
+                    <div className="title">Instagram</div>
+                </a>
+            </li>
+            <li className="social-share-list text-center perfect-square">
+                <a href="#" className="list-inner bg-color-pinterest">
+                    <i className="fab fa-pinterest"></i>
+                    <div className="counts">Check our</div>
+                    <div className="title">Pinterest</div>
+                </a>
+            </li>
+            <li className="social-share-list text-center perfect-square">
+                <a href="#" className="list-inner bg-color-twitch">
+                    <i className="fab fa-shop"></i>
+                    <div className="counts">Shop</div>
+                    <div className="title">African Products</div>
+                </a>
+            </li>
+            <li className="social-share-list text-center perfect-square">
+                <a href="#" className="list-inner bg-color-vimeo">
+                    <i className="fab fa-shop"></i>
+                    <div className="counts">Learn More</div>
+                    <div className="title">About Africa</div>
                 </a>
             </li>
         </ul>
     </div>
+    {posts.length ? (
     <div className="post-widget sidebar-post-widget m-b-xs-40">
-        <ul className="nav nav-pills row no-gutters">
-            <li className="nav-item col">
-                <a className="nav-link active" data-toggle="pill" href="#recent-post">Recent</a>
-            </li>
-            <li className="nav-item col">
-                <a className="nav-link" data-toggle="pill" href="#popular-post">Popular</a>
-            </li>
-            <li className="nav-item col">
-                <a className="nav-link" data-toggle="pill" href="#comments">Comments</a>
-            </li>
-        </ul>
-        <div className="tab-content">
-            <div className="tab-pane fade show active" id="recent-post">
-                <div className="axil-content">
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-1.jpg"
-                                alt="media image" /></a>
-                        <div className="media-body">
-                            <div className="post-cat-group">
-                                <a href="post-format-standard.html"
-                                    className="post-cat color-blue-three">BEAUTY,</a>
-                                <a href="post-format-standard.html"
-                                    className="post-cat color-yellow-one">TRADE,</a>
-                                <a href="post-format-standard.html"
-                                    className="post-cat color-red-one">MUSIC</a>
-                            </div>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Stocking Your Restaurant
-                                    Kitchen Finding Reliable
-                                    Sellers</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Amachea Jajah</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-2.jpg"
-                                alt="media image" /></a>
-                        <div className="media-body">
+    <ul className="nav nav-pills row no-gutters">
+        <li className="nav-item col">
+            <a className="nav-link active" data-toggle="pill" href="#recent-post">Recent</a>
+        </li>
+        <li className="nav-item col">
+            <a className="nav-link" data-toggle="pill" href="#popular-post">Popular</a>
+        </li>
+    </ul>
+    { posts.map( post => (       
+    <div className="tab-content">
+        <div className="tab-pane fade show active" id="recent-post">
+            <div className="axil-content">
+                <div className="media post-block post-block__small">
+                    <a href="post-format-standard.html" className="align-self-center"><img
+                            className=" m-r-xs-30" src={post.jetpack_featured_media_url}
+                            alt="media image" /></a>
+                    <div className="media-body">
+                        <div className="post-cat-group">
                             <a href="post-format-standard.html"
-                                className="post-cat color-green-three">TRAVEL</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Trip
-                                    To Iqaluit In Nunavut A
-                                    Canadian Arctic
-                                    City</a>
-                            </h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Xu Jianhong</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-3.jpg"
-                                alt="media image" /></a>
-                        <div className="media-body">
+                                className="post-cat color-blue-three">BEAUTY,</a>
                             <a href="post-format-standard.html"
-                                className="post-cat color-red-two">SPORTS</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Thousands Now Adware
-                                    Removal Who Never Thought They Could</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Ahmad Nazeri</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-4.jpg"
-                                alt="media image" /></a>
-                        <div className="media-body">
+                                className="post-cat color-yellow-one">TRADE,</a>
                             <a href="post-format-standard.html"
-                                className="post-cat color-blue-one">FASHION</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">To
-                                    Keep Makeup Looking Fresh
-                                    Take A Powder</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Sergio Pliego</a></li>
-                                </ul>
-                            </div>
+                                className="post-cat color-red-one">MUSIC</a>
+                        </div>
+                        <h4 className="axil-post-title hover-line hover-line"><a
+                                href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h4>
+                        <div className="post-metas">
+                            <ul className="list-inline">
+                                <li>By <a href="#">Dee Afrikan</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="tab-pane fade" id="popular-post">
-                <div className="axil-content">
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-3.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-blue-one">FASHION</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">To
-                                    Keep Makeup Looking Fresh
-                                    Take A Powder</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Sergio Pliego</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-2.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="#post-format-standard.html"
-                                className="post-cat color-blue-three">BEAUTY</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Stocking Your Restaurant
-                                    Kitchen Finding Reliable
-                                    Sellers</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Amachea Jajah</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-1.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-green-three">TRAVEL</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Trip
-                                    To Iqaluit In Nunavut A
-                                    Canadian Arctic
-                                    City</a>
-                            </h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Xu Jianhong</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-4.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-red-two">SPORTS</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">RCB
-                                    vs RR, IPL 2019:
-                                    Bangalore, Rajasthan desperate
-                                    for
-                                    win</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Ahmad Nazeri</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="tab-pane fade" id="comments">
-                <div className="axil-content">
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-2.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-red-two">SPORTS</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">RCB
-                                    vs RR, IPL 2019:
-                                    Bangalore, Rajasthan desperate
-                                    for
-                                    win</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Ahmad Nazeri</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-1.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-blue-three">BEAUTY</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Stocking Your Restaurant
-                                    Kitchen Finding Reliable
-                                    Sellers</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Amachea Jajah</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-3.jpg"
-                                alt="media image" /></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-green-three">TRAVEL</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">Trip
-                                    To Iqaluit In Nunavut A
-                                    Canadian Arctic
-                                    City</a>
-                            </h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="post-format-standard.html">Xu Jianhong</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="media post-block post-block__small">
-                        <a href="post-format-standard.html" className="align-self-center"><img
-                                className=" m-r-xs-30" src="assets/images/media/small-media-4.jpg"
-                                alt="media image"/></a>
-                        <div className="media-body">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-blue-one">FASHION</a>
-                            <h4 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">To
-                                    Keep Makeup Looking Fresh
-                                    Take A Powder</a></h4>
-                            <div className="post-metas">
-                                <ul className="list-inline">
-                                    <li>By <a href="#">Sergio Pliego</a></li>
-                                </ul>
-                            </div>
+        </div>
+        <div className="tab-pane fade" id="popular-post">
+            <div className="axil-content">
+                <div className="media post-block post-block__small" key={post.id}>
+                    <a href="post-format-standard.html" className="align-self-center"><img
+                            className=" m-r-xs-30" src={post.jetpack_featured_media_url} 
+                            alt="media image"/></a>
+                    <div className="media-body">
+                        <a href="post-format-standard.html"
+                            className="post-cat color-blue-one">FASHION</a>
+                        <h4 className="axil-post-title hover-line hover-line"><a
+                                href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h4>
+                        <div className="post-metas">
+                            <ul className="list-inline">
+                                <li>By <a href="#">Dee Afrikan</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+     ))}
+     </div>
+) : '' }
 </aside>
 </div>
         )

@@ -1,5 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
+var dt = new Date();
+var DD = ("0" + dt.getDate()).slice(-2);
+
+var MM = ("0" + (dt.getMonth() + 1)).slice(-2);
+
+var YYYY = dt.getFullYear();
+
+var hh = ("0" + dt.getHours()).slice(-2);
+
+var mm = ("0" + dt.getMinutes()).slice(-2);
+
+var months = [
+    " ", "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+var date_string = months[`${MM}`] + " " + DD + ", " + YYYY + "  " + hh + ":" + mm;
 export default class Topnav extends Component {
     render() {
         return (
@@ -8,10 +25,10 @@ export default class Topnav extends Component {
                     <div className="row align-items-center">
                         <div className="col-md">
                             <ul className="header-top-nav list-inline justify-content-center justify-content-md-start">
-                                <li className="current-date">25 July, 2019</li>
-                                <li><a href="#">Advertisement</a></li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+        <li className="current-date">{`${date_string}`}</li>
+                                <li><Link to="/advertise">Advertisement</Link></li>
+                                <li><Link to="/about">About</Link></li>
+                                <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </div>
                         <div className="col-md-auto">
