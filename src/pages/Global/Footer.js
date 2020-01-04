@@ -14,10 +14,10 @@ export default class Footer extends Component {
                         Culture
                     </h2>
                     <ul className="footer-nav">
-                        <li><Link to="/artticle/categories">History</Link></li>
-                        <li><Link to="/artticle/categories">Documentry</Link></li>
-                        <li><Link to="/artticle/categories">Events</Link></li>
-                        <li><Link to="/artticle/categories">Tourism</Link></li>
+                        <li><Link to="/article/categories">History</Link></li>
+                        <li><Link to="/article/categories">Documentry</Link></li>
+                        <li><Link to="/article/categories">Events</Link></li>
+                        <li><Link to="/article/categories">Tourism</Link></li>
                     </ul>
                 </div>
             </div>
@@ -27,10 +27,10 @@ export default class Footer extends Component {
                         Lifestyle
                     </h2>
                     <ul className="footer-nav">
-                        <li><Link to="/artticle/categories">Food</Link></li>
-                        <li><Link to="/artticle/categories">Style</Link></li>
-                        <li><Link to="/artticle/categories">Crafts</Link></li>
-                        <li><Link to="/artticle/categories">Art</Link></li>
+                        <li><Link to="/article/categories">Food</Link></li>
+                        <li><Link to="/article/categories">Style</Link></li>
+                        <li><Link to="/article/categories">Crafts</Link></li>
+                        <li><Link to="/article/categories">Art</Link></li>
                     </ul>
                 </div>
             </div>
@@ -42,8 +42,8 @@ export default class Footer extends Component {
                     <ul className="footer-nav">
                         <li><Link to="/videos">Videos</Link></li>
                         <li><Link to="/audio">Audio</Link></li>
-                        <li><Link to="/artticle/categories">Fashion </Link></li>
-                        <li><Link to="/artticle/categories">General Entertainment</Link></li>
+                        <li><Link to="/article/categories">Fashion </Link></li>
+                        <li><Link to="/article/categories">General Entertainment</Link></li>
                     </ul>
                 </div>
             </div>
@@ -53,10 +53,10 @@ export default class Footer extends Component {
                         Business
                     </h2>
                     <ul className="footer-nav">
-                        <li><Link to="/artticle/categories">Markets</Link></li>
-                        <li><Link to="/artticle/categories">Technology</Link></li>
-                        <li><Link to="/artticle/categories">Features</Link></li>
-                        <li><Link to="/artticle/categories">Business Leaders</Link></li>
+                        <li><Link to="/article/categories">Markets</Link></li>
+                        <li><Link to="/article/categories">Technology</Link></li>
+                        <li><Link to="/article/categories">Features</Link></li>
+                        <li><Link to="/article/categories">Business Leaders</Link></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +69,7 @@ export default class Footer extends Component {
                         <li><a href="https://naijaup.com">NaijaUp Entertainment</a></li>
                         <li><a href="https://theafrican.store">The African Store</a></li>
                         <li><a href="https://mamediang.com">MA Media</a></li>
-                        <li><a href="http://dorjafrica.co ">Dorja Africa</a></li>
+                        <li><a href="http://dorjafrica.com">Dorja Africa</a></li>
                     </ul>
                 </div>
             </div>
@@ -105,8 +105,8 @@ export default class Footer extends Component {
                             <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i className="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i className="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCrEP8T2LEIM1gcaotVCWOVA/"><i className="fab fa-youtube"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/africasveryown"><i className="fab fa-linkedin-in"></i></a></li>
                             <li><a href="#"><i className="fab fa-pinterest"></i></a></li>
                         </ul>
                     </div>
@@ -116,12 +116,15 @@ export default class Footer extends Component {
     </div>
     <div className="footer-bottom">
         <ul className="footer-bottom-links">
-            <li><Link to="/terms">Terms of Use</Link></li>
+        <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Legal Notice</a></li>
+            {/* <li><Link to="/terms">Terms of Use</Link></li>
             <li><Link to="/privacy">Privacy Policy</Link></li>
-            <li><Link to="/legal">Legal Notice</Link></li>
+            <li><Link to="/legal">Legal Notice</Link></li> */}
             <li><Link to="/collaborate">Work with Us</Link></li>
-            <li><Link to="/advertise">Advertise with us</Link></li>
-            <li><Link to="/submit">Submit Your Contents</Link></li>
+            <li><a href="#">Advertise with us</a></li>
+            <li><a href="#">Submit Your Contents</a></li>
             <li><Link to="/donate">Donate to Us</Link></li>
             <li><a href="#">Newsletter</a></li>
             <li><a href="https://theafrican.store">The African Store</a></li>

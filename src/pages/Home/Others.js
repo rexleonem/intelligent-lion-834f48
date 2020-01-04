@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import TimeAgo from '../../components/time'
 // import BlogImg from '../../images/home-1/5-lqip.jpg';
 import { Link } from 'react-router-dom';
@@ -9,7 +8,7 @@ const Entities = require('html-entities').XmlEntities;
 const entities = new Entities();
  
 
-export default class Cat1 extends Component {
+export default class Others extends Component {
 
   constructor(props) {
     super(props);
@@ -54,15 +53,14 @@ export default class Cat1 extends Component {
     { posts.map( post => (       
          <div className="col-lg-3 col-md-4">
             <div className="content-block m-b-xs-30" key={post.id}>
-                <a href="post-format-standard.html">
+                <Link to={`/article/${post.id}`}>
                     <img src={post.jetpack_featured_media_url} alt="abstruct image"
                         className="img-fluid" />
                     <div className="grad-overlay"></div>
-                </a>
+                </Link>
                 <div className="media-caption">
                     <div className="caption-content">
-                        <h3 className="axil-post-title hover-line hover-line"><a
-                                href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h3>
+                        <h3 className="axil-post-title hover-line hover-line"><Link to={`/article/${post.id}`}>{entities.decode(post.title.rendered)}</Link></h3>
                         <div className="caption-meta">
                             By <a href="#">Dee Afrikan</a>
                         </div>

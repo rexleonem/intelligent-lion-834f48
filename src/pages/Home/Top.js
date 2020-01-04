@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import TopSide from './TopSide'
 
 
-import TimeAgo from '../../components/time'
+// import TimeAgo from '../../components/time'
 // import BlogImg from '../../images/home-1/5-lqip.jpg';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 // import { axios } from 'axios';
 const Entities = require('html-entities').XmlEntities;
  
@@ -47,31 +48,29 @@ export default class Top extends Component {
             <div className="container">
                 <div className="section-title m-b-xs-40">
                     <h2 className="axil-title">Top Stories</h2>
-                    <a href="#" className="btn-link">All Top Stories</a>
+                    <Link to="/all-posts" className="btn-link">VIEW ALL</Link>
                 </div>
                 <div className="row">
                 {posts.length ? (
                     <div className="col-lg-8">
              { posts.map( post => (       
                     <div className="axil-img-container m-b-xs-30">
-                        <a href="post-format-standard.html" className="d-block">
+                        <Link to={`/article/${post.id}`} className="d-block">
                             <img src={post.jetpack_featured_media_url} alt="gallery images"
                                 className="w-100" />
                             <div className="grad-overlay"></div>
-                        </a>
+                        </Link>
                         <div className="media post-block position-absolute">
                             <div className="media-body media-body__big">
                                 <div className="post-cat-group m-b-xs-10">
-                                    <a href="business.html" className="post-cat cat-btn bg-color-purple-one">TRAVEL</a>
+                                    <Link to={`/article/${post.id}`} className="post-cat cat-btn bg-color-purple-one">TRAVEL</Link>
                                 </div>
                                 <div className="axil-media-bottom">
-                                    <h3 className="axil-post-title hover-line hover-line"><a
-                                            href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h3>
+                                    <h3 className="axil-post-title hover-line hover-line"><Link to={`/article/${post.id}`}>{entities.decode(post.title.rendered)}</Link></h3>
                                     <div className="post-metas">
                                         <ul className="list-inline">
-                                            <li>By <a href="#" className="post-author">Dee Afrikan</a></li>
-                                            <li><i className="dot">.</i>July 17, 2019</li>
-                                            <li><a href="#"><i className="feather icon-activity"></i>5k Views</a></li>
+                                            <li><i className="feather icon-user"></i><a href="#" className="post-author">Dee Afrikan</a></li>
+                                            <li><a href="#"><i className="feather icon-clock"></i><Moment fromNow>{post.date}</Moment></a></li>
                                             <li><a href="#"><i className="feather icon-share-2"></i>230 Shares</a></li>
                                         </ul>
                                     </div>

@@ -3,7 +3,6 @@ import Homeadd from '../Global/Homeadd'
 import MainSidebar from '../Global/MainSidebar'
 import renderHTML from 'react-render-html';
 
-import TimeAgo from '../../components/time'
 // import BlogImg from '../../images/home-1/5-lqip.jpg';
 import { Link } from 'react-router-dom';
 // import { axios } from 'axios';
@@ -62,18 +61,17 @@ return (
             <main className="axil-content">
          { posts.map( post => (
             <div className="media post-block post-block__mid m-b-xs-30" key={post.id}>
-                <a href="post-format-standard.html" className="align-self-center"><img className=" m-r-xs-30"
-                        src={post.jetpack_featured_media_url} alt=""/></a>
+                <Link to={`/article/${post.id}`} className="align-self-center"><img className=" m-r-xs-30"
+                        src={post.jetpack_featured_media_url} alt=""/></Link>
                 <div className="media-body">
                     <div className="post-cat-group m-b-xs-10">
-                        <a href="business.html" className="post-cat cat-btn bg-color-blue-one">TRAVEL</a>
+                        <Link to="/article/categories"className="post-cat cat-btn bg-color-blue-one">TRAVEL</Link>
                     </div>
-                    <h3 className="axil-post-title hover-line hover-line"><a
-                            href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h3>
+                    <h3 className="axil-post-title hover-line hover-line"><Link to={`/article/${post.id}`}>{entities.decode(post.title.rendered)}</Link></h3>
                     <p className="mid">{renderHTML(truncateString(post.excerpt.rendered, 100) ) }</p>
                     <div className="post-metas">
                         <ul className="list-inline">
-                            <li>By <a href="#">Dee Afrikan</a></li>
+                            <li><i className="feather icon-user"></i> <a href="#">Dee Afrikan</a></li>
                         </ul>
                     </div>
                 </div>

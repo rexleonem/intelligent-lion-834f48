@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import ContactBg from '../../images/contact-bg.jpg';
+import { Helmet } from 'react-helmet'
+
+const TITLE = "Africa's Very Own - Contact Us"
 export default class Contact extends Component {
     render() {
         return (
             <div>
-
+            <Helmet>
+            <title>{ TITLE }</title>
+            </Helmet>
 <div className="breadcrumb-wrapper">
     <div className="container">
         <nav aria-label="breadcrumb">
@@ -32,13 +38,14 @@ export default class Contact extends Component {
     <div className="container">
 
         <div className="section-title d-block text-center">
-            <h2 className="axil-title m-b-xs-20">Meet Our Publishing Authors</h2>
-            <p>Wherever & whenever you need us. We are here for you - contact us for all your support needs,
-                <br />be it technical, general queries or information support.</p>
+            <h2 className="axil-title m-b-xs-20">Get in Touch With Us</h2>
+            <p>Drop us a line anytime if you have any questions, suggestions,
+                <br />contributions or you want to work with us.</p>
         </div>
 
         <figure className="m-b-xs-30 p-t-xs-10">
-            <img src="assets/images/contact-banner.jpg" alt="contact banner" className="img-fluid mx-auto" />
+            <img src={ContactBg} alt="contact banner" className="img-fluid mx-auto" />
+            <p>Image by <a href="https://pixabay.com/users/Agnali-3087927/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732247">Juanita Mulder</a></p>
         </figure>
     </div>
 </div>
@@ -96,17 +103,12 @@ export default class Contact extends Component {
                         </h2>
                         <div className="axil-contact-info">
                             <address className="address">
-                                <p className="mid m-b-xs-30">Theodore Lowe, Ap #867-859<br />Sit Rd, Azusa New
-                                    York</p>
+                                <p className="mid m-b-xs-30">7 Kafi Street Alausa<br />Ikeja, Lagos
+                                    NG</p>
 
-                                <div className="h5 m-b-xs-10">We're Available 24/ 7. Call Now.</div>
+                                <div className="h5 m-b-xs-10">Call Or Chat on WhatsApp.</div>
                                 <div>
-                                    <a className="tel" href="tel:8884562790"><i className="fas fa-phone"></i>(888)
-                                        456-2790</a>
-                                </div>
-                                <div>
-                                    <a className="tel" href="tel:12125553333"><i className="fas fa-fax"></i>(121)
-                                        255-53333</a>
+                                    <a className="tel" href="tel:2348066230476"><i className="fas fa-phone"></i>+234 806 623 0476</a>
                                 </div>
                             </address>
 
@@ -115,8 +117,9 @@ export default class Contact extends Component {
                                 <ul className="social-share social-share__with-bg">
                                     <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fab fa-behance"></i></a></li>
+                                    <li><a href="#"><i className="fab fa-instagram"></i></a></li>
                                     <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i className="fab fa-pinterest"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -137,7 +140,7 @@ export default class Contact extends Component {
         <div className="axil-map-wrapper m-b-xs-30">
 
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d848618.3019582209!2d-117.3496119!3d33.8145003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64ed3c3ce8f%3A0x8710c5557f723e2a!2s106+W+1st+St%2C+Los+Angeles%2C+CA+90012%2C+USA!5e0!3m2!1sen!2sbd!4v1563866499894!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15853.099534051871!2d3.357932456432613!3d6.612728835110055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93ca4f7213f9%3A0x6e2fc2c32f8643a4!2s7%20Kafi%20St%2C%20Oregun%5C%2C%20Ikeja!5e0!3m2!1sen!2sng!4v1577836066785!5m2!1sen!2sng"
                 width="600" height="450" allowfullscreen></iframe>
         </div>
     </div>

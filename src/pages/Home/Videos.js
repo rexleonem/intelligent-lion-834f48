@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import VidSide from './VidSide'
 import TimeAgo from '../../components/time'
 import { Link } from 'react-router-dom'
+import Moment from 'react-moment'
 const API = 'AIzaSyDEXTxNap_qCSeNNYhVbehg4gKh9gAu3oM'
 // const API = 'AIzaSyCfPRKndX6DoiiJ4trcoxmLgPdjNKaBftA'
 const channelID = 'UCNNv1_xBpnYynxPM0jLH4fg'
@@ -9,7 +10,7 @@ const result = 1;
 const embedUrl = 'https://www.youtube.com/embed/'
 const ytUrl = 'https://www.youtube.com/watch/'
 
-
+ 
 // https://www.googleapis.com/youtube/v3/search?key=AIzaSyAOYG1Ai4mZy6L-ifZgQ8bzS87vA6v3JdA&channelId=UCXgGY0wkgOzynnHvSEVmE3A&part=snippet,id&order=date&maxResults=10
 
 var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
@@ -47,7 +48,7 @@ componentDidMount(){
         <div className="container">
             <div className="section-title title-white m-b-xs-40">
                 <h2 className="axil-title">Videos</h2>
-                <a href="#" className="btn-link ml-auto">All VIDEOS</a>
+                <Link to="/videos" className="btn-link ml-auto">All VIDEOS</Link>
             </div>
 
             <div className="row">
@@ -68,9 +69,8 @@ componentDidMount(){
                                 <h3 className="axil-post-title hover-line hover-line"><a href={`${ytUrl}`+vid.id.videoId} target="_blank" rel="noopener noreferrer">{vid.snippet.title}</a></h3>
                                 <div className="post-metas">
                                     <ul className="list-inline">
-                                        <li>By <a href="#" className="post-author">{vid.snippet.channelTitle}</a></li>
-                                        <li><i className="dot">.</i><TimeAgo time={vid.snippet.publishedAt} /></li>
-                                        <li><a href="#"><i className="feather icon-activity"></i>5k Views</a></li>
+                                        <li><i className="feather icon-user"></i><a href="#" className="post-author">{vid.snippet.channelTitle}</a></li>
+                                        <li><a href="#"><i className="feather icon-clock"></i><Moment fromNow>{vid.snippet.publishedAt}</Moment></a></li>
                                         <li><a href="#"><i className="feather icon-share-2"></i>230 Shares</a></li>
                                     </ul>
                                 </div>

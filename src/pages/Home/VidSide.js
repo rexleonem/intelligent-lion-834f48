@@ -60,7 +60,7 @@ componentDidMount(){
                     <h3 className="axil-post-title hover-line hover-line"><a href={`${ytUrl}`+vid.id.videoId} target="_blank" rel="noopener noreferrer">{vid.snippet.title}</a></h3>
                     <div className="post-metas">
                         <ul className="list-inline">
-                            <li>By <a href="#">{vid.snippet.channelTitle}</a></li>
+                            <li><i className="feather icon-user"></i> <a href="#">{vid.snippet.channelTitle}</a></li>
                         </ul>
                     </div>
                 </div>

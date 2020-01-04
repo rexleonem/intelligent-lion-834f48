@@ -4,6 +4,7 @@ import RecentSide from './RecentSide'
 import TimeAgo from '../../components/time'
 // import BlogImg from '../../images/home-1/5-lqip.jpg';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 // import { axios } from 'axios';
 const Entities = require('html-entities').XmlEntities;
  
@@ -59,13 +60,11 @@ export default class Recent extends Component {
                             </div>
                         </figure>
                         <div className="media-body">
-                            <h3 className="axil-post-title hover-line hover-line"><a
-                                    href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h3>
+                            <h3 className="axil-post-title hover-line hover-line"><Link to={`/article/${post.id}`}>{entities.decode(post.title.rendered)}</Link></h3>
                             <div className="post-metas">
                                 <ul className="list-inline">
-                                    <li>By <a href="#" className="post-author">Dee Afrikan</a></li>
-                                    <li><i className="dot">.</i><TimeAgo time={post.date} /></li>
-                                    <li><a href="#"><i className="feather icon-activity"></i>5k Views</a></li>
+                                    <li><i className="feather icon-user"></i><a href="#" className="post-author">Dee Afrikan</a></li>
+                                    <li><a href="#"><i className="feather icon-clock"></i><Moment fromNow>{post.date}</Moment></a></li>
                                     <li><a href="#"><i className="feather icon-share-2"></i>230 Shares</a></li>
                                 </ul>
                             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MainSidebar from '../Global/MainSidebar'
-import Aboutimg from '../../images/about.png';
+// import Aboutimg from '../../images/about.png';
 import { Link } from 'react-router-dom';
 
 
@@ -35,9 +35,6 @@ export default class Legal extends Component {
     <div className="axil-about-us section-gap-top p-b-xs-20">
         <div className="container">
 
-            <figure className="m-b-xs-40">
-                <img src={Aboutimg} alt="about us" className="img-fluid mx-auto" />
-            </figure>
 
             <div className="row">
                 <div className="col-lg-8">

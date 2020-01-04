@@ -8,12 +8,18 @@ import Trending from './Trending'
 import Videos from './Videos'
 import MainContents from './Main'
 import Others from './Others'
+import { Helmet } from 'react-helmet'
+
+const TITLE = "Africa's Very Own - Home"
 
 export default class Home extends Component {
     render() {
         return (
             <div class="main-content">
-            {/* <Popup /> */}
+            <Helmet>
+            <title>{ TITLE }</title>
+            </Helmet>
+             {/* <Popup /> */}
                 <Sidenav />
                 <Recent />
                 <Top />

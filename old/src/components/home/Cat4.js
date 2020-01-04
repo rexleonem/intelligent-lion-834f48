@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import TimeAgo from '../time'
 
 // import BlogImg from '../../images/home-1/5-lqip.jpg';
-import { Link } from 'react-router-dom';
+import { Link } from '@reach/router';
+
 // import { axios } from 'axios';
 const Entities = require('html-entities').XmlEntities;
  

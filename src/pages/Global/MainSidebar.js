@@ -4,6 +4,7 @@ import CategoryImg from '../../images/category-bg/category-bg-1.png'
 import { Link } from 'react-router-dom';
 import SideAdd from './SideAdd';
 // import { axios } from 'axios';
+
 const Entities = require('html-entities').XmlEntities;
  
 const entities = new Entities();
@@ -69,15 +70,9 @@ export default class MainSidebar extends Component {
             </div>
         </div>
     </div>
-    <div className="category-widget m-b-xs-40">
+    {/* <div className="category-widget m-b-xs-40">
         <div className="widget-title">
             <h3>Categories</h3>
-            <div className="owl-nav">
-                <button className="custom-owl-prev"><i
-                        className="feather icon-chevron-left"></i></button>
-                <button className="custom-owl-next"><i
-                        className="feather icon-chevron-right"></i></button>
-            </div>
         </div>
         <div className="category-carousel">
             <div className="owl-carousel owl-theme" data-owl-items="1" data-owl-loop="true"
@@ -173,18 +168,18 @@ export default class MainSidebar extends Component {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
     <div className="sidebar-social-share-widget m-b-xs-40">
         <ul className="social-share-list-wrapper">
             <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-facebook">
+                <a href="https://facebook.com/africasveryown1" className="list-inner bg-color-facebook">
                     <i className="fab fa-facebook-f"></i>
                     <div className="counts">Find us on </div>
                     <div className="title">Facebook</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-twitter">
+                <a href="https://twitter.com/africasveryown1" className="list-inner bg-color-twitter">
                     <i className="fab fa-twitter"></i>
                     <div className="counts">Follow us on</div>
                     <div className="title">Twitter</div>
@@ -198,14 +193,14 @@ export default class MainSidebar extends Component {
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-linkedin">
+                <a href="https://linkedin.com/company/africasveryown" className="list-inner bg-color-linkedin">
                     <i className="fab fa-linkedin-in"></i>
                     <div className="counts">Connect on</div>
                     <div className="title">LinkedIn</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-instagram">
+                <a href="https://instagram.com/africasveryown1" className="list-inner bg-color-instagram">
                     <i className="fab fa-instagram"></i>
                     <div className="counts">Follow us on</div>
                     <div className="title">Instagram</div>
@@ -219,14 +214,14 @@ export default class MainSidebar extends Component {
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-twitch">
+                <a href="https://theafrican.store" className="list-inner bg-color-twitch">
                     <i className="fab fa-shop"></i>
                     <div className="counts">Shop</div>
                     <div className="title">African Products</div>
                 </a>
             </li>
             <li className="social-share-list text-center perfect-square">
-                <a href="#" className="list-inner bg-color-vimeo">
+                <a href="http://dorjafrica.com" className="list-inner bg-color-vimeo">
                     <i className="fab fa-shop"></i>
                     <div className="counts">Learn More</div>
                     <div className="title">About Africa</div>
@@ -238,10 +233,7 @@ export default class MainSidebar extends Component {
     <div className="post-widget sidebar-post-widget m-b-xs-40">
     <ul className="nav nav-pills row no-gutters">
         <li className="nav-item col">
-            <a className="nav-link active" data-toggle="pill" href="#recent-post">Recent</a>
-        </li>
-        <li className="nav-item col">
-            <a className="nav-link" data-toggle="pill" href="#popular-post">Popular</a>
+            <a className="nav-link active" data-toggle="pill" href="#recent-post">Sponsored Contents</a>
         </li>
     </ul>
     { posts.map( post => (       
@@ -254,35 +246,11 @@ export default class MainSidebar extends Component {
                             alt="media image" /></a>
                     <div className="media-body">
                         <div className="post-cat-group">
-                            <a href="post-format-standard.html"
-                                className="post-cat color-blue-three">BEAUTY,</a>
-                            <a href="post-format-standard.html"
-                                className="post-cat color-yellow-one">TRADE,</a>
-                            <a href="post-format-standard.html"
-                                className="post-cat color-red-one">MUSIC</a>
+                            <a href="#"
+                                className="post-cat color-blue-three">SPONSORED</a>
+
                         </div>
-                        <h4 className="axil-post-title hover-line hover-line"><a
-                                href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h4>
-                        <div className="post-metas">
-                            <ul className="list-inline">
-                                <li>By <a href="#">Dee Afrikan</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="tab-pane fade" id="popular-post">
-            <div className="axil-content">
-                <div className="media post-block post-block__small" key={post.id}>
-                    <a href="post-format-standard.html" className="align-self-center"><img
-                            className=" m-r-xs-30" src={post.jetpack_featured_media_url} 
-                            alt="media image"/></a>
-                    <div className="media-body">
-                        <a href="post-format-standard.html"
-                            className="post-cat color-blue-one">FASHION</a>
-                        <h4 className="axil-post-title hover-line hover-line"><a
-                                href="post-format-standard.html">{entities.decode(post.title.rendered)}</a></h4>
+                        <h4 className="axil-post-title hover-line hover-line"><Link to={`/article/${post.id}`}>{entities.decode(post.title.rendered)}</Link></h4>
                         <div className="post-metas">
                             <ul className="list-inline">
                                 <li>By <a href="#">Dee Afrikan</a></li>

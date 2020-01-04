@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 export default class Navbar extends Component {
     render() {
         return (
@@ -7,14 +7,14 @@ export default class Navbar extends Component {
     <div className="container">
         <div className="navbar-inner">
             <div className="brand-logo-container">
-                <a href="#">
+                <Link to="/">
                     <img src="assets/images/logo.png" alt="" className="brand-logo" />
-                </a>
+                </Link>
             </div>
             <div className="main-nav-wrapper">
                 <ul className="main-navigation list-inline" id="main-menu">
                     <li>
-                        <a href="#">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className="has-dropdown">
                         <a href="#">Culture</a>
@@ -41,7 +41,7 @@ export default class Navbar extends Component {
                         <ul className="submenu">
                             <li><Link to="/videos">Videos</Link>
                             </li>
-                            <li><Link to="/audio">Audio</Link></li>
+                            <li><Link to="/article/categories">Audio</Link></li>
                             <li><Link to="/article/categories">Fashion</Link></li>
                             <li><Link to="/article/categories">Genetal Entertainment</Link></li>
                         </ul>

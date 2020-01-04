@@ -13,14 +13,15 @@ import Details from './pages/Blog/Details';
 import ComingSoon from './pages/Page/ComingSoon';
 import SubmitContents from './pages/Page/SubmitContents';
 import Donate from './pages/Page/Donate';
-import Audio from './pages/Page/Audio';
-import AudioDetails from './pages/Page/Audio/AudioDetails';
+import Audio from './pages/Audio';
+import AudioDetails from './pages/Audio/AudioDetails';
 import VideoDetails from './pages/Videos/VideoDetails';
 import AllVideos from './pages/Videos';
 import Privacy from './pages/Page/Privacy';
 import Terms from './pages/Page/Terms';
 import Legal from './pages/Page/Legal';
 import Category from './pages/Blog/Category';
+import DetailsTemp from './pages/Blog/Details-1';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       <Route path="/all-posts" component={AllPosts} />
       <Route path="/advertise" component={Advertise} />
       <Route path="/collaborate" component={Collaborate} /> 
-      <Route path="/article/details" component={Details} />
+      <Route path="/article/details" component={DetailsTemp} />
+      <Route path="/article/:id" component={Details} />
       <Route path="/404" component={NotFound} />
       <Route path="/coming-soon" component={ComingSoon} />
       <Route path="/submit-contents" component={SubmitContents} />
@@ -42,11 +44,11 @@ function App() {
       <Route path="/audio" component={Audio} />
       <Route path="/audio/details" component={AudioDetails} />
       <Route path="/videos" component={AllVideos} />
-      <Route path="/video/details" component={VideoDetails} />
+      <Route path="/video/:id" component={VideoDetails} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/legal" component={Legal} />
-      <Route path="/article/categories" component={Category} />
+      <Route path="/category/:id" component={Category} />
       {/* <Route path="/terms" component={Terms} /> */}
       </Switch>
       <Footer /> 

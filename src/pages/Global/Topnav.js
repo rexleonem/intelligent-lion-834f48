@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 var dt = new Date();
 var DD = ("0" + dt.getDate()).slice(-2);
 
 var MM = ("0" + (dt.getMonth() + 1)).slice(-2);
+
+var MY = Number(MM);
 
 var YYYY = dt.getFullYear();
 
@@ -16,7 +18,8 @@ var months = [
     " ", "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
-var date_string = months[`${MM}`] + " " + DD + ", " + YYYY + "  " + hh + ":" + mm;
+//   var date_string = months[`${MM}`] + " " + DD + ", " + YYYY + "  " + hh + ":" + mm;
+  var date_string = months[`${MY}`] + " " + DD + ", " + YYYY + "  " + hh + ":" + mm;
 export default class Topnav extends Component {
     render() {
         return (
@@ -25,18 +28,21 @@ export default class Topnav extends Component {
                     <div className="row align-items-center">
                         <div className="col-md">
                             <ul className="header-top-nav list-inline justify-content-center justify-content-md-start">
-        <li className="current-date">{`${date_string}`}</li>
-                                <li><Link to="/advertise">Advertisement</Link></li>
+                                <li className="current-date">{`${date_string}`}</li>
+                                <li><a href="#">Advertisement</a></li>
+                                {/* <li><Link to="/advertise">Advertisement</Link></li> */}
                                 <li><Link to="/about">About</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
                         </div>
                         <div className="col-md-auto">
                             <ul className="ml-auto social-share header-top__social-share">
-                                <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/africasvery_own/"><i className="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.twitter.com/africasvery_own/"><i className="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/africasvery_own/"><i className="fab fa-instagram"></i></a></li>
                                 <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i className="fab fa-pinterest"></i></a></li>
+                                <li><a href="#"><i className="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>

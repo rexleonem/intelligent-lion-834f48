@@ -59,12 +59,11 @@ export default class TopSide extends Component {
                                 className="post-cat cat-btn btn-mid bg-color-purple-two">BUEATY</a>
                         </div>
                         <div className="axil-media-bottom">
-                            <h3 className="axil-post-title hover-line hover-line"><a
-                                    href="#">{entities.decode(post.title.rendered)}</a></h3>
+                            <h3 className="axil-post-title hover-line hover-line"><Link to={`/article/${post.id}`}>{entities.decode(post.title.rendered)}</Link></h3>
                             <div className="post-metas">
                                 <ul className="list-inline">
-                                    <li><a href="post-format-standard.html"
-                                            className="d-flex align-items-center"><span>By Dee Afrikan</span></a></li>
+                                    <li><Link to={`/article/${post.id}`}
+                                            className="d-flex align-items-center"><span>By Dee Afrikan</span></Link></li>
                                 </ul>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ export default class Terms extends Component {
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                 <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">About Us</li>
+                    <li className="breadcrumb-item active" aria-current="page">Terms</li>
                 </ol>
             </nav>
         </div>
@@ -25,7 +25,7 @@ export default class Terms extends Component {
             <div className="row align-items-center">
                 <div className="col-lg-12">
                     <div className="post-title-wrapper">
-                        <h2 className="m-b-xs-0 axil-post-title hover-line">About Us</h2>
+                        <h2 className="m-b-xs-0 axil-post-title hover-line">Terms Of Use</h2>
                     </div>
                 </div>
             </div>
@@ -35,9 +35,6 @@ export default class Terms extends Component {
     <div className="axil-about-us section-gap-top p-b-xs-20">
         <div className="container">
 
-            <figure className="m-b-xs-40">
-                <img src={Aboutimg} alt="about us" className="img-fluid mx-auto" />
-            </figure>
 
             <div className="row">
                 <div className="col-lg-8">
